@@ -19,18 +19,17 @@ inputs.forEach((input,index)=>{
             inputs[index - 1].value = "";
 			}
 		}
-		if(e.key==="ArrowLeft"){
-			if(!input.value&&index>0){
-				inputs[index - 1].focus();
-			}
-		}
-		if(e.key==="ArrowRight"){
-			if(!input.value&&index<6){
-				inputs[index +1].focus();
-			}
-		}
+		if (e.key === "ArrowLeft" && index > 0) {
+      inputs[index - 1].focus();
+    }
+
+    if (e.key === "ArrowRight" && index < inputs.length - 1) {
+      inputs[index + 1].focus();
+    }
 	})
 });
-// inputs[0].focus();
+window.onload = () => {
+  inputs[0].focus();
+};
 
 
